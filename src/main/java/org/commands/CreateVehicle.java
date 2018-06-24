@@ -85,6 +85,9 @@ public class CreateVehicle implements ICommand, Serializable {
 
         EngineParserFactory epf = new EngineParserFactory();
         EngineParser ep = epf.getAppropriateEngineParser(engineType);
+        if(ep == null){
+            return "";
+        }
         List engineInput = ep.validateEngineInput(engineInfo);
         Engine engine;
         if(engineInput == null){
