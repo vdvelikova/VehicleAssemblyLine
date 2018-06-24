@@ -8,20 +8,6 @@ public class EngineParserFactory {
      * @param engineType
      * @return object of type EngineParser
      */
-    /*public EngineParser getAppropriateEngineParser(String engineType){
-        if(engineType.equals("B")){
-            return new BenzineEngineParser();
-        }else if(engineType.equals("D")){
-             return new DieselEngineParser();
-        }else if(engineType.equals("E")){
-            return new ElectricEngineParser();
-        }
-        else{
-            throw new IllegalArgumentException("There is some problem with your input for engine. Please check and try again.");
-        }
-        //return null;
-    }*/
-
     public EngineParser getAppropriateEngineParser(String engineType){
         try {
             if(engineType.equals("B")){
@@ -38,6 +24,5 @@ public class EngineParserFactory {
             System.out.println(e.getMessage());
             return null;
         }
-        //return null;
     }
 }
