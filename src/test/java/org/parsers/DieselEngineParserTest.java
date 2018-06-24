@@ -55,12 +55,8 @@ public class DieselEngineParserTest {
     }
 
     @Test
-    public void validInputInformation441hpT(){
+    public void invalidInputInformation441hpT(){
         String engineInput = "engine=D-441hpT-euro3";
-        List output = new ArrayList();
-        output.add("D");
-        output.add("196hpT");
-        output.add("euro3");
         DieselEngineParser dep = new DieselEngineParser();
         assertEquals(null,dep.validateEngineInput(engineInput));
     }

@@ -129,7 +129,6 @@ public class BenzineEngineParser implements EngineParser {
             }
         }else if(displacementOrPower.equals("hpT")){
             double kW = num * 0.7457 * 1.3;
-            System.out.println(kW + "kW");
 
             boolean fallsWithinKwRangeFlag = false;
             for (double kWpossible : possibleBenzinKWwithTurbo) {
